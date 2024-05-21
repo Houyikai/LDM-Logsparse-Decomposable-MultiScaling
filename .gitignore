@@ -1,0 +1,6 @@
+/checkpoints/
+/dataset/
+/logs/
+/results/
+/test_results/
+*.pyc
