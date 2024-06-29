@@ -13,6 +13,10 @@ We first need to understand the cause of overfitting, which is:
 
 Therefore, it is necessary to introduce multi-resolution attention (i.e., MTE) and shorten the context of smaller resolutions to avoid overfitting. This is a straightforward implementation,  there are many better methods for multi-resolution attention, refer to the computer vision field. However, we believe sequence decoupling is essential.
 
+## Performance
+![image](https://github.com/Houyikai/MTE/assets/39182537/81e89266-7adc-45a3-ac5e-033bf1b6c8e6)
+Other methods result employ a context window size of 96, our MTE utilizes an optimal window size ranging from 960 to 1680(some times 336), determined by the sequence’s periodicity.
+
 ## how to use
 1. install dependencies 
 ```
