@@ -13,6 +13,9 @@ We first need to understand the cause of overfitting, which is:
 
 Therefore, it is necessary to introduce multi-resolution attention (i.e., MTE) and shorten the context of smaller resolutions to avoid overfitting. This is a straightforward implementation,  there are many better methods for multi-resolution attention, refer to the computer vision field. However, we believe sequence decoupling is essential.
 
+## why WIDE than DEEP
+This method employs a wide, low-coupling architecture instead of a deep network, which intuitively seems suboptimal. However, some facts about current forecasting models are: (1) the number of layers is usually small (1~3), and (2) the encoder layers between the input and output layers have a relatively small impact on the prediction results (~10%). These facts compel us to consider adopting a wide structure and making improvements at the embedding layer and the prediction layer rather than the slightly-involved encoding layer(input-output layer).
+
 ## Performance
 ![image](https://github.com/Houyikai/MTE/assets/39182537/81e89266-7adc-45a3-ac5e-033bf1b6c8e6)
 Other methods result employ a context window size of 96, our MTE utilizes an optimal window size ranging from 960 to 1680(some times 336), determined by the sequence’s periodicity.
