@@ -17,7 +17,7 @@ Therefore, it is necessary to introduce multi-resolution attention (i.e., MTE) a
 This method employs a wide, low-coupling architecture instead of a deep network, which intuitively seems suboptimal. However, some facts about current forecasting models are: (1) the number of layers is usually small (1~3), and (2) the encoder layers between the input and output layers have a relatively small impact on the prediction results (~10%). These facts compel us to consider adopting a wide structure and making improvements at the embedding layer and the prediction layer rather than the slightly-involved encoding layer(input-output layer).
 
 ## Performance
-The main results, MAE (Mean Absolute Error) and MSE (Mean Squared Error), with lower values indicating better predictive performance, are calculated using $$\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|$$ and $$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$.
+The main results, MAE (Mean Absolute Error) and MSE (Mean Squared Error), with lower values indicating better predictive performance.
 ![image](https://github.com/Houyikai/MTE/assets/39182537/81e89266-7adc-45a3-ac5e-033bf1b6c8e6)
 
 Visualization results.
