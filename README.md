@@ -1,10 +1,10 @@
 ## background
 This is a method for time series forecasting. Short fixed-length inputs are the main bottleneck of deep learning methods in long time-series forecasting tasks. Prolonging input length causes overfitting, rapidly deteriorating accuracy(left pic). Our method can adapt to longer context, thereby achieving better performance(right pic).
-<img src="**https://github.com/user-attachments/assets/08cef77b-1b79-4774-94db-636b03d5379e**" width="800" />
+![Snipaste_2024-12-18_19-48-53](https://github.com/user-attachments/assets/2d67d52d-152d-4c4a-896d-3f9c47e6fb84)
+
 
 ## model
-<img src="https://github.com/user-attachments/assets/08cef77b-1b79-4774-94db-636b03d5379e" width="800" />
-
+![framework_overview](https://github.com/user-attachments/assets/e2439ede-1500-415c-9fda-3c65de95f94a)
 
 The multiscale modeling approach, exemplified by TimeMixer, has shown promise in modeling long-term dependencies, especially in real-world phenomena like traffic with multiple temporal patterns. TimeMixer uses two main modules: the Past-Decomposable-Mixing (PDM), which mixes seasonal and trend components at different scales, and the Future-Multipredictor-Mixing (FMM), which combines multiple forecasters for better accuracy.
 
