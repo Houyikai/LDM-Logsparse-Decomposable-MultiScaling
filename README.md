@@ -5,14 +5,16 @@ This is a method for time series forecasting. Short fixed-length inputs are the 
 ## model
 ![framework_overview](https://github.com/user-attachments/assets/08cef77b-1b79-4774-94db-636b03d5379e)
 
-The dynamic patterns of time series are often dominated by several frequency components. We found that handling different frequency components of time series separately can improve prediction performance and efficiently utilize larger contexts. First, Fourier analysis is used to determine the periods (1/freq) of the top-k amplitudes in the series. Then, the series is decomposed into a set of periodic sequences based on these period lengths, with each sequence dominated by a specific length of periodic pattern. Each periodic sequence is then embedded and modeled using its period length as the patch size (token size) through a Periodic pattern recognition (PPR) module, allowing the model to focus on different scales of the series.
+The multiscale modeling approach, exemplified by TimeMixer, has shown promise in modeling long-term dependencies, especially in real-world phenomena like traffic with multiple temporal patterns. TimeMixer uses two main modules: the Past-Decomposable-Mixing (PDM), which mixes seasonal and trend components at different scales, and the Future-Multipredictor-Mixing (FMM), which combines multiple forecasters for better accuracy.
+
+However, the sampling approach has three main limitations: 1) **Insufficient context**: Shorter inputs lead to prediction errors as the model lacks sufficient context for effective learning. 2) **Non-stationarity**: Downsampling introduces additional non-stationary components, increasing complexity. 3) **Limited applicability**: Multiscale downsampling requires specialized modules (like PDM) for aggregation, adding overhead and reducing scalability.
 
 ## why it can accomdate long inputs 
 We first need to understand the cause of overfitting, which is:
 
 **A single, fixed patch size causes the model to focus only on the temporal patterns at a primary scale of the sequence (e.g., 24 points, or one day), thus not requiring a long context (512). **
 
-Therefore, it is necessary to introduce multi-resolution attention (i.e., MTE) and shorten the context of smaller resolutions to avoid overfitting. This is a straightforward implementation,  there are many better methods for multi-resolution attention, refer to the computer vision field. However, we believe sequence decoupling is essential.
+Therefore, it is necessary to introduce multi-resolution analysis and shorten the context of smaller resolutions to avoid overfitting. This is a straightforward implementation,  there are many better methods such as multi-resolution attention.
 
 ## why WIDE than DEEP
 This method employs a wide, low-coupling architecture instead of a deep network, which intuitively seems suboptimal. However, some facts about current forecasting models are: (1) the number of layers is usually small (1~3), and (2) the encoder layers between the input and output layers have a relatively small impact on the prediction results (~10%). These facts compel us to consider adopting a wide structure and making improvements at the embedding layer and the prediction layer rather than the slightly-involved encoding layer(input-output layer).
