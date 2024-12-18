@@ -1,9 +1,10 @@
 ## background
 This is a method for time series forecasting. Short fixed-length inputs are the main bottleneck of deep learning methods in long time-series forecasting tasks. Prolonging input length causes overfitting, rapidly deteriorating accuracy(left pic). Our method can adapt to longer context, thereby achieving better performance(right pic).
-![image](https://github.com/Houyikai/MTE/assets/39182537/b2a37717-cda2-44d3-a0a5-adef22f95c6e)
+![Snipaste_2024-12-18_19-48-53](https://github.com/user-attachments/assets/d3b7e84f-1157-4f5a-bd03-4131fd19b594)
 
 ## model
-![image](https://github.com/Houyikai/MTE/assets/39182537/4165815c-97f9-46f8-a635-787a5bf4e5c2)
+![framework_overview](https://github.com/user-attachments/assets/08cef77b-1b79-4774-94db-636b03d5379e)
+
 The dynamic patterns of time series are often dominated by several frequency components. We found that handling different frequency components of time series separately can improve prediction performance and efficiently utilize larger contexts. First, Fourier analysis is used to determine the periods (1/freq) of the top-k amplitudes in the series. Then, the series is decomposed into a set of periodic sequences based on these period lengths, with each sequence dominated by a specific length of periodic pattern. Each periodic sequence is then embedded and modeled using its period length as the patch size (token size) through a Periodic pattern recognition (PPR) module, allowing the model to focus on different scales of the series.
 
 ## why it can accomdate long inputs 
@@ -18,7 +19,12 @@ This method employs a wide, low-coupling architecture instead of a deep network,
 
 ## Performance
 The main results, MAE (Mean Absolute Error) and MSE (Mean Squared Error), with lower values indicating better predictive performance.
-![image](https://github.com/Houyikai/MTE/assets/39182537/81e89266-7adc-45a3-ac5e-033bf1b6c8e6)
+Multivariate Benchmark
+![Snipaste_2024-12-18_19-43-52](https://github.com/user-attachments/assets/aab844aa-dec5-48d1-9772-c5ae84284564)
+Univariate Benchmark
+![Snipaste_2024-12-18_19-44-56](https://github.com/user-attachments/assets/98d69255-3634-43da-97d9-3a6d1c76626e)
+Performance promotion to old baseline 
+![Snipaste_2024-12-18_19-45-05](https://github.com/user-attachments/assets/a1c7ab2b-1284-4fc1-8c69-cb0843557b8d)
 
 Visualization results.
 ![Snipaste_2024-07-20_20-57-49](https://github.com/user-attachments/assets/c64fb174-8cfa-4219-8cfa-e6b0e69bc6f4)
@@ -29,6 +35,10 @@ Visualization results.
 ```
 pip install -r requirements.txt
 ```
+
+2. prepare data
+You can obtain the well pre-processed datasets from [[Google Drive]](https://drive.google.com/drive/folders/13Cg1KYOlzM5C7K8gK8NfC-F3EYxkM3D2?usp=sharing) or [[Baidu Drive]](https://pan.baidu.com/s/1r3KhGd0Q9PJIUZdfEYoymg?pwd=i9iy), Then place the downloaded data in the folder`./dataset`. thanks to [[thuml]](https://github.com/thuml)
+
 
 2. To reproduce all results in the paper, run following scripts to get corresponding results:
 ```
