@@ -6,11 +6,11 @@ if [ ! -d "./logs/LongForecasting" ]; then
     mkdir ./logs/LongForecasting
 fi
 seq_len=960
-model_name=MTETST
+model_name=LDMTST
 
 root_path_name=./dataset/
 data_path_name=ETTm2.csv
-model_id_name=MTETST
+model_id_name=LDMTST
 data_name=ETTm2
 
 random_seed=2021

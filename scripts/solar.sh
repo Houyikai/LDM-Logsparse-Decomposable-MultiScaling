@@ -6,7 +6,7 @@ if [ ! -d "./logs/LongForecasting" ]; then
     mkdir ./logs/LongForecasting
 fi
 seq_len=1440
-model_name=MTETST
+model_name=LDMTST
 
 root_path_name=./dataset/
 data_path_name=solar_AL.txt

@@ -1,4 +1,4 @@
-__all__ = ['ppr']
+__all__ = ['TbP']
 
 # Cell
 from typing import Callable, Optional
@@ -19,7 +19,8 @@ import matplotlib.pyplot as plt
 
 show = False
 
-class ppr(nn.Module):
+# Transformer-based Predictor
+class TbP(nn.Module):
     def __init__(self, c_in: int, context_window: int, target_window: int, patch_len: int, stride: int, max_seq_len: Optional[int] = 1024,
                  n_layers: int = 3, d_model=128, n_heads=16, factor=10, d_k: Optional[int] = None, d_v: Optional[int] = None,
                  d_ff: int = 256, norm: str = 'BatchNorm', attn_dropout: float = 0., dropout: float = 0., act: str = "gelu", key_padding_mask: bool = 'auto',

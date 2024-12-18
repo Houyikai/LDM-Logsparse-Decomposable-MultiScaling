@@ -1,4 +1,4 @@
-__all__ = ['MTE']
+__all__ = ['LDM']
 
 # Cell
 from typing import Callable, Optional
@@ -9,7 +9,7 @@ from torch import Tensor
 import torch.nn.functional as F
 import numpy as np
 import matplotlib.pyplot as plt
-from layers.ppr import ppr
+from layers.TbP import TbP
 import matplotlib.ticker as ticker
 import pandas as pd
 ACTIVATIONS = ["ReLU", "Softplus", "Tanh", "SELU", "LeakyReLU", "PReLU", "Sigmoid"]
@@ -80,7 +80,7 @@ class Model(nn.Module):
         # max_period_num = configs.period_num
         max_period_num = configs.period_num
 
-        self.layers = nn.ModuleList([ppr(c_in=c_in, context_window=min([seq_len,int(period/l*seq_len * max_period_num)]), target_window=pred_len, patch_len=int(period/l*seq_len), stride=int(period/l*seq_len), 
+        self.layers = nn.ModuleList([TbP(c_in=c_in, context_window=min([seq_len,int(period/l*seq_len * max_period_num)]), target_window=pred_len, patch_len=int(period/l*seq_len), stride=int(period/l*seq_len), 
                                   max_seq_len=max_seq_len, n_layers=n_layers, d_model=d_model,
                                   n_heads=n_heads, factor=factor, d_k=d_k, d_v=d_v, d_ff=d_ff, norm=norm, attn_dropout=attn_dropout,
                                   dropout=dropout, act=act, key_padding_mask=key_padding_mask, padding_var=padding_var, 
