@@ -1,6 +1,8 @@
 ## background
 This is a method for time series forecasting. Short fixed-length inputs are the main bottleneck of deep learning methods in long time-series forecasting tasks. Prolonging input length causes overfitting, rapidly deteriorating accuracy(left pic). Our method can adapt to longer context, thereby achieving better performance(right pic).
+<p align="center">
 <img src="https://github.com/user-attachments/assets/2d67d52d-152d-4c4a-896d-3f9c47e6fb84" width="600" />
+</p>
 
 ## model
 <img src="https://github.com/user-attachments/assets/e2439ede-1500-415c-9fda-3c65de95f94a" width="600" />
@@ -24,9 +26,13 @@ The main results, MAE (Mean Absolute Error) and MSE (Mean Squared Error), with l
 Multivariate Benchmark
 ![Snipaste_2024-12-18_19-43-52](https://github.com/user-attachments/assets/aab844aa-dec5-48d1-9772-c5ae84284564)
 Univariate Benchmark
+<p align="center">
 <img src="https://github.com/user-attachments/assets/714f56f5-27a3-415b-afe7-67a3160b9126" width="600" />
+</p>
 Performance promotion to old baseline 
+<p align="center">
 <img src="https://github.com/user-attachments/assets/a1c7ab2b-1284-4fc1-8c69-cb0843557b8d" width="600" />
+</p>
 Visualization results.
 ![Snipaste_2024-12-18_20-11-34](https://github.com/user-attachments/assets/0b1d8b90-6d1f-4a40-a505-1ec49285b04c)
 
