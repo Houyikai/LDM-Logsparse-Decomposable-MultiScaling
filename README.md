@@ -37,7 +37,9 @@ Performance promotion to old baseline
 <img src="https://github.com/user-attachments/assets/a1c7ab2b-1284-4fc1-8c69-cb0843557b8d" width="600" />
 </p>
 Visualization results.
-![Snipaste_2024-12-18_20-11-34](https://github.com/user-attachments/assets/0b1d8b90-6d1f-4a40-a505-1ec49285b04c)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/0b1d8b90-6d1f-4a40-a505-1ec49285b04c" width="800" />
+</p>
 
 
 ## how to use
