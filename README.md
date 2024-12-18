@@ -5,8 +5,9 @@ This is a method for time series forecasting. Short fixed-length inputs are the 
 </p>
 
 ## model
+<p align="center">
 <img src="https://github.com/user-attachments/assets/e2439ede-1500-415c-9fda-3c65de95f94a" width="600" />
-
+</p>
 The multiscale modeling approach, exemplified by TimeMixer, has shown promise in modeling long-term dependencies, especially in real-world phenomena like traffic with multiple temporal patterns. TimeMixer uses two main modules: the Past-Decomposable-Mixing (PDM), which mixes seasonal and trend components at different scales, and the Future-Multipredictor-Mixing (FMM), which combines multiple forecasters for better accuracy.
 
 However, the sampling approach has three main limitations: 1) **Insufficient context**: Shorter inputs lead to prediction errors as the model lacks sufficient context for effective learning. 2) **Non-stationarity**: Downsampling introduces additional non-stationary components, increasing complexity. 3) **Limited applicability**: Multiscale downsampling requires specialized modules (like PDM) for aggregation, adding overhead and reducing scalability.
@@ -24,7 +25,9 @@ This method employs a wide, low-coupling architecture instead of a deep network,
 ## Performance
 The main results, MAE (Mean Absolute Error) and MSE (Mean Squared Error), with lower values indicating better predictive performance.
 Multivariate Benchmark
-![Snipaste_2024-12-18_19-43-52](https://github.com/user-attachments/assets/aab844aa-dec5-48d1-9772-c5ae84284564)
+<p align="center">
+<img src="https://github.com/user-attachments/assets/aab844aa-dec5-48d1-9772-c5ae84284564" width="600" />
+</p>
 Univariate Benchmark
 <p align="center">
 <img src="https://github.com/user-attachments/assets/714f56f5-27a3-415b-afe7-67a3160b9126" width="600" />
