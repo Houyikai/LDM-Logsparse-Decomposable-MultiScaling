@@ -1,9 +1,9 @@
 ## background
 This is a method for time series forecasting. Short fixed-length inputs are the main bottleneck of deep learning methods in long time-series forecasting tasks. Prolonging input length causes overfitting, rapidly deteriorating accuracy(left pic). Our method can adapt to longer context, thereby achieving better performance(right pic).
-![Snipaste_2024-12-18_19-48-53](https://github.com/user-attachments/assets/d3b7e84f-1157-4f5a-bd03-4131fd19b594)
+![Snipaste_2024-12-18_19-48-53](https://github.com/user-attachments/assets/d3b7e84f-1157-4f5a-bd03-4131fd19b594){: style="width: 300px;"}
 
 ## model
-![framework_overview](https://github.com/user-attachments/assets/08cef77b-1b79-4774-94db-636b03d5379e)
+![framework_overview](https://github.com/user-attachments/assets/08cef77b-1b79-4774-94db-636b03d5379e){: style="width: 300px;"}
 
 The multiscale modeling approach, exemplified by TimeMixer, has shown promise in modeling long-term dependencies, especially in real-world phenomena like traffic with multiple temporal patterns. TimeMixer uses two main modules: the Past-Decomposable-Mixing (PDM), which mixes seasonal and trend components at different scales, and the Future-Multipredictor-Mixing (FMM), which combines multiple forecasters for better accuracy.
 
@@ -24,9 +24,9 @@ The main results, MAE (Mean Absolute Error) and MSE (Mean Squared Error), with l
 Multivariate Benchmark
 ![Snipaste_2024-12-18_19-43-52](https://github.com/user-attachments/assets/aab844aa-dec5-48d1-9772-c5ae84284564)
 Univariate Benchmark
-![Snipaste_2024-12-18_19-44-56](https://github.com/user-attachments/assets/98d69255-3634-43da-97d9-3a6d1c76626e)
+![Snipaste_2024-12-18_19-44-56](https://github.com/user-attachments/assets/98d69255-3634-43da-97d9-3a6d1c76626e){: style="width: 300px;"}
 Performance promotion to old baseline 
-![Snipaste_2024-12-18_19-45-05](https://github.com/user-attachments/assets/a1c7ab2b-1284-4fc1-8c69-cb0843557b8d)
+![Snipaste_2024-12-18_19-45-05](https://github.com/user-attachments/assets/a1c7ab2b-1284-4fc1-8c69-cb0843557b8d){: style="width: 300px;"}
 
 Visualization results.
 ![Snipaste_2024-12-18_20-11-34](https://github.com/user-attachments/assets/0b1d8b90-6d1f-4a40-a505-1ec49285b04c)
