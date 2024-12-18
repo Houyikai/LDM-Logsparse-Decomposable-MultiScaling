@@ -25,10 +25,9 @@ The main results, MAE (Mean Absolute Error) and MSE (Mean Squared Error), with l
 Multivariate Benchmark
 ![Snipaste_2024-12-18_19-43-52](https://github.com/user-attachments/assets/aab844aa-dec5-48d1-9772-c5ae84284564)
 Univariate Benchmark
-![Snipaste_2024-12-18_19-48-53](https://github.com/user-attachments/assets/d3b7e84f-1157-4f5a-bd03-4131fd19b594)
+![Snipaste_2024-12-18_19-44-56](https://github.com/user-attachments/assets/714f56f5-27a3-415b-afe7-67a3160b9126)
 Performance promotion to old baseline 
 ![Snipaste_2024-12-18_19-45-05](https://github.com/user-attachments/assets/a1c7ab2b-1284-4fc1-8c69-cb0843557b8d)
-
 Visualization results.
 ![Snipaste_2024-12-18_20-11-34](https://github.com/user-attachments/assets/0b1d8b90-6d1f-4a40-a505-1ec49285b04c)
 
