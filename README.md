@@ -3,7 +3,7 @@ This is a method for time series forecasting. Short fixed-length inputs are the 
 ![Snipaste_2024-12-18_19-48-53](https://github.com/user-attachments/assets/d3b7e84f-1157-4f5a-bd03-4131fd19b594){: style="width: 300px;"}
 
 ## model
-![framework_overview](https://github.com/user-attachments/assets/08cef77b-1b79-4774-94db-636b03d5379e){: style="width: 300px;"}
+<img src="https://github.com/user-attachments/assets/08cef77b-1b79-4774-94db-636b03d5379e" width="400" />
 
 The multiscale modeling approach, exemplified by TimeMixer, has shown promise in modeling long-term dependencies, especially in real-world phenomena like traffic with multiple temporal patterns. TimeMixer uses two main modules: the Past-Decomposable-Mixing (PDM), which mixes seasonal and trend components at different scales, and the Future-Multipredictor-Mixing (FMM), which combines multiple forecasters for better accuracy.
 
